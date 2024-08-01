@@ -1,0 +1,27 @@
+.Close-btn {
+	height: 35px;
+	border: none;
+	position: fixed;
+	top: 10px;
+	right: 0;
+	background-color: transparent;
+	cursor: pointer;
+	z-index: 9999999;
+}
+
+.Close-btn .bar:nth-child(1) {
+	transform: rotate(45deg) translate(7px, 6px);
+}
+.Close-btn .bar:nth-child(2) {
+	transform: rotate(-45deg) translate(-1px, 1px);
+}
+
+.Close-btn:hover .bar, .Close-btn:focus .bar {
+	background-color: #007468;
+}
+
+@media screen and (max-width: 650px) {
+	.Close-btn {
+		position: absolute;
+	}
+}

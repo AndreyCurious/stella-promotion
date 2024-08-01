@@ -1,0 +1,126 @@
+.Footer_container {
+	max-height: 250px;
+	background-color: #f6f6f6;
+}
+
+.Footer_container-content {
+	max-width: 1200px;
+	margin: 0 10%;
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+	align-items: center;
+	padding-top: 3%;
+}
+
+.Footer-first_section {
+	width: 50%;
+}
+
+.Footer-first_section-logo_container {
+	width: 50%;
+	padding-bottom: 3%;
+}
+
+.Footer-first_section-logo_container-logo{
+	width: 100%;
+}
+
+.Footer-first_section-сontact_details {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 2%;
+}
+
+.Footer-first_section-сontact_details *{
+	padding: .5% 0;
+	display: inline;
+}
+
+.Footer-first_section-сontact_details>li>a {
+	cursor: pointer;
+}
+
+.Footer-first_section-сontact_details>li>a:hover {
+	color: #007468;
+}
+.Footer-second_section {
+	width: 50%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.Footer-second_section-social_media>li>a>img {
+	width: 100%;
+	height: 100%;
+}
+
+.Footer-second_section-social_media>li>a {
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+}
+
+.Footer-second_section-social_media {
+	display: flex;
+	list-style-type: none;
+}
+
+@media screen and (max-width: 940px) {
+	.Footer_container-content {
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.Footer-first_section {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.Footer-first_section-logo_container-logo {
+		width: 75%;
+	}
+
+	.Footer-first_section-сontact_details {
+		align-items: flex-end;
+	}
+
+	.Footer-first_section-сontact_details * {
+		white-space: nowrap;
+    padding: 1% 0;
+	}
+
+	.Footer-second_section {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.Footer-first_section {
+		flex-direction: column;
+		align-items: center;
+	}
+	.Footer-first_section-logo_container {
+		display: flex;
+		justify-content: center;
+		padding-bottom: 3%;
+	}
+	.Footer-first_section-сontact_details {
+		align-items: center;
+}
+}
+
+@media screen and (max-width: 500px) {
+	.Footer-first_section-сontact_details * {
+		font-size: 0.9em;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.Footer-first_section-logo_container-logo {
+		width: 100%;
+	}
+}
+

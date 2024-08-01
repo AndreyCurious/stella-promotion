@@ -1,0 +1,10 @@
+.dark {
+	background-color: #444447;
+	z-index: 1000;
+	position: fixed;
+	height: 100vh;
+	width: 50vw;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+}

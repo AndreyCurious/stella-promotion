@@ -1,0 +1,10 @@
+.Total_price {
+	text-align: end;
+	height: 30px;
+	margin-top: 5%;
+}
+
+.Total_price>span {
+	font-size: 1.5em;
+	font-weight: 500;
+}

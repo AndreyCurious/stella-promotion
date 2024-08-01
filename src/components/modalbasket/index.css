@@ -1,0 +1,63 @@
+.Modal_basket-container {
+	display: none;
+}
+
+.Modal_basket-container.active {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(206, 209, 219, 0.523);
+	width: 100vw;
+	height: 100vh;
+}
+
+.Modal_basket-close_button {
+	position: absolute;
+	right: 2%;
+	top: 4%;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.Modal_basket-layout {
+	width: 50%;
+	height: 90%;
+	background-color: #ffffff;
+	opacity: 1;
+	border-radius: 20px;
+	padding: 3% 3% 3% 3%;
+	position: relative;
+	overflow-y: scroll;
+}
+
+@media (max-width: 1150px) {
+	.Modal_basket-layout {
+		width: 60%;
+	}
+}
+
+@media (max-width: 950px) {
+	.Modal_basket-layout {
+		width: 70%;
+	}
+}
+
+@media (max-width: 770px) {
+	.Modal_basket-layout {
+		width: 80%;
+	}
+}
+
+@media (max-width: 650px) {
+	.Modal_basket-layout {
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+	}
+}
+

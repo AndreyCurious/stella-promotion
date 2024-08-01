@@ -1,0 +1,50 @@
+.Add_basket-basket {
+	width: 50%;
+	color: #ffffff;
+	background-color: #007468;
+	border: none;
+	height: 100%;
+	cursor: pointer;
+	transition: all .3s ease;
+	font-size: 0.8em;
+	font-weight: 600;
+	border-radius: 5px;
+}
+
+.Add_basket-basket:hover {
+	background-color: #52baab;
+}
+.Add_basket-basket:focus {
+	background-color: #007468;
+}
+
+.Add_basket-count {
+	display: flex;
+	align-items: center;
+	margin-right: 2% !important;
+	width: 50%;
+	height: 100%;
+	border: 1px solid #007468;
+	border-radius: 5px;
+}
+
+.Add_basket-count-pluse, .Add_basket-count-minus {
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+	color: #007468;
+	display: flex;
+	align-items: center;
+	height: 100%;
+} 
+.Add_basket-count-pluse>span, .Add_basket-count-minus>span {
+	font-size: 1.8em;
+	font-weight: 100;
+	padding-bottom: 5px;
+}
+
+.Add_basket-input {
+	text-align: center;
+	height: 100% !important;
+	margin: 0 !important;
+}

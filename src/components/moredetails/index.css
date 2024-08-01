@@ -1,0 +1,19 @@
+.More_detailes-container { 
+	background-color: #f6f6f6;
+	transition: .3s linear;
+}
+
+.Modal_more-product-photos {
+	display: flex;
+	flex-direction: row;
+	width: 50%;
+}
+
+.back_icon {
+	width: 30px;
+}
+.More_detailes-content-container {
+	padding: 3% 0;
+	margin: 0 10%;
+	display: flex;
+}

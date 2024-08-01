@@ -1,0 +1,205 @@
+.Banner-container {
+	display: flex;
+	justify-content: center;
+	height: 450px;
+	max-width: 1200px;
+	margin: 0 10%;
+}
+.first-banner {
+	margin-top: 150px;
+}
+
+
+.Banner-left_side {
+	width: 40%;
+	background-color: #f6f6f6;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-between;
+}
+
+.Banner-left_side_title {
+	margin-top: 7%;
+	font-size: 4em;
+	text-transform: uppercase;
+}
+
+.Banner-left_side_desc {
+	font-size: 1.4em;
+}
+
+.Banner-left_side_discont {
+	font-size: 3em;
+	margin-bottom: 14%;
+}
+
+.Banner-left_side_data {
+	font-size: 0.9em;
+	text-align: end;
+}
+
+.Banner-right_side {
+	background-color: #52baab;
+	width: 60%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: flex-end;
+	color: #f6f6f6;
+	position: relative;
+	z-index: 1;
+}
+
+.Banner-right_side-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 15% 11% 5% 0;
+}
+
+.Banner-right_side-content-info {
+	font-size: 18px;
+	padding: 0 0 10px 0;
+}
+
+.Banner-right_side-content-info>li {
+	padding-bottom: 5px;
+}
+
+.Banner-right_side-content-info-title {
+	font-weight: 700;
+}
+
+.Banner-right_side-content-old_price {
+	font-size: 34px;
+	text-decoration: line-through;
+	text-align: end;
+	font-weight: 500;
+}
+
+.Banner-right_side-content-new_price {
+  font-size: 40px;  
+  background-color: #52baab;
+  padding: 4px 6px;
+  font-weight: 500;
+  text-align: end;
+  width: 113px;
+	margin: 6% -40px 0 auto;
+}
+
+@media screen and (max-width: 1126px) {
+	.Banner-left_side_title {
+		font-size: 3em;
+	}
+	.Banner-right_side {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 836px) {
+	.Banner-left_side_title {
+		font-size: 2.5em;
+	}
+	.Banner-left_side_discont {
+		font-size: 2.5em;
+	}
+	.Banner-left_side_desc {
+		font-size: 1.2em;
+	}
+	.Banner-left_side_data {
+		font-size: 0.7em;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.first-banner {
+		margin-top: 120px;
+	}
+	.Banner-container {
+		height: 550px;
+	}
+}
+
+@media screen and (max-width: 740px) {
+	.Banner-left_side_title {
+		font-size: 2em;
+	}
+	.Banner-left_side_discont {
+		font-size: 2em;
+	}
+	.Banner-right_side-content-old_price {
+		text-align: start;
+	}
+	.Banner-right_side-content-new_price {
+		margin: 6% 0;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.Banner-right_side-content {
+		padding-left: 11%
+	}
+	.Banner-left_side {
+		width: 50%;
+	}
+	.Banner-right_side {
+		width: 50%;
+	}
+	.Banner-right_side-content-info {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.Banner-right_side-content-info {
+		font-size: 14px;
+	}
+	.Banner-right_side-content-old_price {
+		font-size: 26px;
+	}
+	.Banner-right_side-content-new_price {
+		font-size: 30px;
+		width: 90px;
+	}
+}
+@media screen and (max-width: 450px) {
+	.Banner-right_side-content-info {
+		font-size: 14px;
+	}
+	.Banner-right_side-content-old_price {
+		font-size: 20px;
+	}
+	.Banner-right_side-content-new_price {
+		font-size: 24px;
+		
+	}
+	.Banner-left_side_title {
+		font-size: 1.5em;
+	}
+	.Banner-left_side_discont {
+		font-size: 1.5em;
+	}
+	.Banner-left_side_data {
+		font-size: 0.5em;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.Banner-left_side_title {
+		font-size: 1.3em;
+	}
+	.Banner-right_side-content-new_price {
+		width: 60%;
+	}
+}
+
+
+
+@media screen and (max-width: 370px) {
+	.Banner-right_side-content-new_price {
+		width: 75%;
+	}
+}
+

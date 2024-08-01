@@ -1,0 +1,88 @@
+
+.Side-menu-container {
+	z-index: 9999;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transform: translateX(100%) ;
+	height: 100vh;
+	width: 50vw;
+	background-color: #f6f6f6;
+	transition: .2s linear;
+}
+
+.Side-menu-container.active {
+	transform: translate(0);
+}
+
+.Side-menu-nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 80%;
+	padding: 10% 0;
+	margin-top: 45px;
+	overflow-y: scroll;
+}
+
+.Side-menu-category>button {
+	display: block;
+	width: 100%;
+	padding: 10px 20px;
+	font-size: 0.9em;
+	font-weight: 500;
+	transition: all .3s ease-in-out;
+	background-color: #cfcfcf;
+	border: none;
+}
+
+.Side-menu-category>button:hover, .Side-menu-category>button:focus {
+	color: #ffffff;
+	background-color: #007468;
+}
+
+.Side-menu-wa_btn {
+	margin: 10% 5%;
+	overflow-x: unset;
+}
+
+.Side-menu-wa_btn>a {
+	padding: 5%;
+	border: 1.5px solid #23c961;
+	border-radius: 30px;
+	color: #23c961;
+	transition: all .3s ease-in-out;
+}
+
+.Side-menu-wa_btn>a:hover, .Side-menu-wa_btn>a:focus {
+	border-color: #444447;
+	color: #444447;
+}
+
+.Side-menu-tel, .Side-menu-email {
+	margin-left: 5%;
+	margin-bottom: 1%;
+}
+.Side-menu-email {
+	margin-top: 5%;
+}
+
+.Side-menu-tel>a, .Side-menu-email>a {
+	font-weight: 500;
+}
+
+.Side-menu-tel>a:hover, .Side-menu-email>a:hover, .Side-menu-tel>a:focus, .Side-menu-email>a:focus {
+	color: #007468;
+}
+
+@media screen and (max-width: 430px) {
+	.Side-menu-tel>a, .Side-menu-email>a {
+		font-size: 0.9em;
+	}
+	.Side-menu-wa_btn>a {
+		font-size: 0.7em;
+	}
+	.Side-menu-category>a {
+		font-size: 0.8em;
+	}
+}

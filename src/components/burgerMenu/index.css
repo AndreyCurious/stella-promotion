@@ -1,0 +1,58 @@
+.Menu-button {
+	border: 1.5px solid #444447;
+	border-radius: 10px;
+	margin-left: 10%;
+	cursor: pointer;
+	transition: all .5s ease-in-out;
+	background-color: unset;
+	padding: 0;
+}
+
+.Menu-button:hover .bar {
+	background-color: #007468;
+}
+.Menu-button:hover {
+	border-color: #007468;
+	background-color: unset;
+}
+
+.Menu-button:hover .bar:nth-child(2) {
+	width: 20px;
+}
+
+.Menu-button.active .bar:nth-child(2) {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.Menu-button.active .bar:nth-child(1)  {
+	transform: rotate(45deg) translate(7px, 5px);
+	width: 35px;
+}
+
+.Menu-button.active .bar:nth-child(3)  {
+	transform: rotate(-45deg) translate(10px, -5px);
+	width: 35px;
+}
+
+.bar {
+	display: block;
+	margin: 0px 7px 5px 7px;
+	width: 30px;
+	height: 3px;
+	background-color: #444447;
+	transition: all .5s ease-in-out;
+}
+
+.bar:first-of-type {
+	margin-top: 7px;
+}
+.bar:last-of-type {
+	margin-bottom: 7px;
+}
+
+@media screen and (min-width: 769px) {
+	.Menu-button {
+		display: none;
+	}
+}

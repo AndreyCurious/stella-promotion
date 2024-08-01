@@ -1,0 +1,23 @@
+.Product-newprice, .Product-oldprice {
+	font-size: 1.5em;
+	font-weight: 500;
+}
+.Product-newprice {
+	color: #007468;
+}
+.Product-oldprice {
+	color: #bdbdbd;
+	text-decoration: line-through;
+}
+
+@media screen and (max-width: 520px) {
+	.Product-newprice, .Product-oldprice {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.Product-newprice, .Product-oldprice {
+		font-size: 1em;
+	}
+}

@@ -1,0 +1,11 @@
+.dark {
+	background-color: #444447;
+	z-index: 1000;
+	position: relative;
+	height: 100vh;
+	opacity: 0.5;
+}
+
+body {
+	width: 100%;
+}
