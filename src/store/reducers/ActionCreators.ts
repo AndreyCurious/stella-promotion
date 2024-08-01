@@ -37,7 +37,7 @@ export const fetchProducts = createAsyncThunk(
 	async ({title, limit}: DataProducts, thunkAPI) => {
 		try {
 			const products = await axios.get<IProduct[]>(`https://vercel-template-theta.vercel.app/products/?fetch_title=${title}&_limit=${limit}`);
-			const counts = await axios.get<IProduct[]>(`http://localhost:5000/counts/?fetch_title=${title}`);
+			const counts = await axios.get<IProduct[]>(`https://vercel-template-theta.vercel.app/counts/?fetch_title=${title}`);
 			return {products: products.data, counts: counts.data};
 		} catch(e) {
 			return thunkAPI.rejectWithValue({fetch_title: title, value: 'Не удалось загрузить данные категории товаров'})
