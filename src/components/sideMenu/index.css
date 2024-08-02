@@ -34,6 +34,7 @@
 	transition: all .3s ease-in-out;
 	background-color: #cfcfcf;
 	border: none;
+	color: black;
 }
 
 .Side-menu-category>button:hover, .Side-menu-category>button:focus {

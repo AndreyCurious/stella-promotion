@@ -38,6 +38,7 @@
 
 .Cards-products-basket-product-btns-change_count>button {
 	background-color: transparent;
+	color: black;
 	border: 1px solid black;
 	border-radius: 50%;
 	font-size: 13px;

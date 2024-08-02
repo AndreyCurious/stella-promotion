@@ -10,10 +10,8 @@ import {
 } from '../../store/reducers/BasketSlice';
 import Modalbasket from '../../components/modalbasket';
 import { IProduct } from '../../models/IProduct';
-import Closebtn from '../../components/closebtn';
 import Basketcontent from '../../components/basketcontent';
 import Cardsproductsbasket from '../../components/cardsproductsbasket';
-import product from '../../app/product';
 import Dataclientform from '../../components/dataclientform';
 import Totalprice from '../../components/totalprice';
 

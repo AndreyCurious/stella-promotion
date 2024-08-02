@@ -14,7 +14,7 @@ const initialState: MenuBurgerState = {
 }
 
 export const menuBurgerSlice = createSlice({
-	name: 'menuBurger',
+	name: 'basket',
 	initialState,
 	reducers: {
 		openBasket(state) {
@@ -34,7 +34,7 @@ export const menuBurgerSlice = createSlice({
 			} else {
 				state.basket.push({...action.payload.product, countbasket: action.payload.countbasket})
 			}
-			state.totalPrice =+ action.payload.product.new_price * action.payload.countbasket;
+			state.totalPrice += action.payload.product.new_price * action.payload.countbasket;
 		},
 		removeProduct(state, action: PayloadAction<IProduct>) {
 			state.basket = state.basket.filter((item: IProduct) => action.payload.id !== item.id);

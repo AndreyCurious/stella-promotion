@@ -2,7 +2,7 @@ import './index.css';
 import React, { FC, memo } from 'react';
 import { IProduct } from '../../models/IProduct';
 
-interface CardsProductsBasket {
+interface ICardsProductsBasket {
   productsInBasket: IProduct[];
   deleteProduct: (product: IProduct) => void;
   removeOneProduct: (product: IProduct) => void;
@@ -10,10 +10,22 @@ interface CardsProductsBasket {
   closeBasket: () => void;
 }
 
-const CardsProductsBasket: FC<CardsProductsBasket> = (props) => {
-  if (props.productsInBasket.length === 0) {
-    props.closeBasket();
-  }
+const CardsProductsBasket: FC<ICardsProductsBasket> = (props) => {
+  const closeBasketWithoutProducts = (product: IProduct, event: string) => {
+    switch (event) {
+      case 'deleteOneProduct':
+        product.countbasket !== 1
+          ? props.removeOneProduct(product)
+          : props.deleteProduct(product);
+        props.productsInBasket.length === 1 &&
+          product.countbasket === 1 &&
+          props.closeBasket();
+        break;
+      case 'deleteProduct':
+        props.deleteProduct(product);
+        props.productsInBasket.length === 1 && props.closeBasket();
+    }
+  };
   return (
     <>
       <div className="Cards-products-basket">
@@ -37,10 +49,8 @@ const CardsProductsBasket: FC<CardsProductsBasket> = (props) => {
               <div className="Cards-products-basket-product-btns">
                 <div className="Cards-products-basket-product-btns-change_count">
                   <button
-                    onClick={
-                      product.countbasket != 1
-                        ? () => props.removeOneProduct(product)
-                        : () => props.deleteProduct(product)
+                    onClick={() =>
+                      closeBasketWithoutProducts(product, 'deleteOneProduct')
                     }
                   >
                     -
@@ -54,7 +64,9 @@ const CardsProductsBasket: FC<CardsProductsBasket> = (props) => {
                   <span>{product.new_price * product.countbasket} руб.</span>
                 </div>
                 <button
-                  onClick={() => props.deleteProduct(product)}
+                  onClick={() =>
+                    closeBasketWithoutProducts(product, 'deleteProduct')
+                  }
                   id="Cards-products-basket-product-btns-delete_product"
                 >
                   <img
