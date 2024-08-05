@@ -48,3 +48,8 @@
 	height: 100% !important;
 	margin: 0 !important;
 }
+.Add_basket-input[type=number]::-webkit-inner-spin-button, 
+.Add_basket-input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none !important; 
+  margin: 0 !important; 
+}

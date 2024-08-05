@@ -109,9 +109,6 @@
 }
 
 @media screen and (max-width: 520px) {
-	.Card-product-img {
-		height: 150px;
-	}
 	.Card-product-title {
 		font-size: 0.7em;
 	}
@@ -121,9 +118,6 @@
 }
 
 @media screen and (max-width: 400px) {
-	.Card-product-img {
-		height: 120px;
-	}
 	.Card-product-title {
 		font-size: 0.7em;
 	}
