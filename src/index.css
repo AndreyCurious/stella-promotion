@@ -23,6 +23,7 @@ time, mark, audio, video {
 html {
 	color: #444447;
   overflow-x: hidden;
+	background-color: #ffffff;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
