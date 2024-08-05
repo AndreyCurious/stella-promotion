@@ -39,6 +39,7 @@
 	font-weight: 700;
 	border: none;
 	cursor: pointer;
+	margin-bottom: 20%;
 }
 
 .Client_form-input_submitbtn[disabled] {
