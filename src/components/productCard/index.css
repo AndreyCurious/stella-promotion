@@ -125,12 +125,3 @@
 	}
 }
 
-@media (pointer: fine) { 
-	.Card-product-more_detailes:hover {
-		background-color: #52baab;
-	}
-}
-
-@media (pointer: coarse) {
-
-}

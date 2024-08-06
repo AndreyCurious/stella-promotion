@@ -1,4 +1,5 @@
 import { IProduct } from '../../models/IProduct';
+import Loadingpoints from '../loadingpoints';
 import './index.css';
 import React, { FC, memo, useState } from 'react';
 
@@ -10,7 +11,14 @@ interface IAddBasket {
 }
 
 const AddBasket: FC<IAddBasket> = (props) => {
+  const [isFakeLoading, setIsFakeLoading] = useState<boolean>(false);
   const [countProducts, setCountProducts] = useState<number>(1);
+  const fakeLoading = () => {
+    setIsFakeLoading(true);
+    setTimeout(() => {
+      setIsFakeLoading(false);
+    }, 1000);
+  };
   return (
     <>
       <div className="Add_basket-count">
@@ -45,10 +53,13 @@ const AddBasket: FC<IAddBasket> = (props) => {
           props.addBasket(props.product, countProducts);
           setCountProducts(1);
           props.basket === 'Купить' && props.openBasket?.();
+          fakeLoading();
         }}
-        className="Add_basket-basket"
+        className={
+          isFakeLoading ? 'Add_basket-basket loading' : 'Add_basket-basket'
+        }
       >
-        {props.basket}
+        {isFakeLoading ? <Loadingpoints /> : props.basket}
       </button>
     </>
   );

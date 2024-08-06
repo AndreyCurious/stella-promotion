@@ -4,13 +4,13 @@ import React, { FC, memo } from 'react';
 import PricesProduct from '../pricesproduct';
 import Addbasket from '../addbasket';
 
-interface MoreDetailesInfo {
+interface IMoreDetailesInfo {
   currentProduct: IProduct;
   addBasket: (product: IProduct, countbasket: number) => void;
   openBasket: () => void;
 }
 
-const MoreDetailesInfo: FC<MoreDetailesInfo> = (props) => {
+const MoreDetailesInfo: FC<IMoreDetailesInfo> = (props) => {
   return (
     <div className="More_detailes_info-container">
       <div className="More_detailes_info-title">

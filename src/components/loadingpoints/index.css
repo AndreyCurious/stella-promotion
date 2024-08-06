@@ -1,0 +1,49 @@
+
+.Loading-points {
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  border-radius: 50%;
+  position: relative;
+  -webkit-animation: Loading-points 0.5s 0.35s ease alternate infinite;
+  animation: Loading-points 0.5s 0.35s ease alternate infinite;
+}
+
+.Loading-points:after,
+.Loading-points:before {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  animation: Loading-points 0.5s ease alternate infinite;
+  -webkit-animation: Loading-points 0.5s ease alternate infinite;
+}
+
+.Loading-points:before {
+  left: -20px;
+  animation-delay: 0.2s;
+}
+
+.Loading-points:after {
+  right: -20px;
+  animation-delay: 0.5s;
+}
+
+@keyframes Loading-points {
+  0% {
+    box-shadow: 0 15px 0 -15px #ffffff;
+  }
+  100% {
+    box-shadow: 0 15px 0 #ffffff;
+  }
+}
+
+@-webkit-keyframes Loading-points {
+  0% {
+    box-shadow: 0 15px 0 -15px #ffffff;
+  }
+  100% {
+    box-shadow: 0 15px 0 #ffffff;
+  }
+}

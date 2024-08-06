@@ -75,9 +75,6 @@ a {
 a, span, p {
   font-size: 16px;
 }
-button:focus {
-	background-color: unset;
-}
 
 input {
 	outline: none;

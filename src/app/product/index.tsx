@@ -5,7 +5,7 @@ import { setMainPhotoId } from '../../store/reducers/MoreDetailsSlice';
 import { addProduct, openBasket } from '../../store/reducers/BasketSlice';
 import { IProduct } from '../../models/IProduct';
 import { fetchSingleProduct } from '../../store/reducers/ActionCreators';
-import Loader from '../../components/loader';
+import LoadingCircle from '../../components/loadingcircle';
 
 function Product() {
   const dispatch = useAppDispatch();
@@ -37,7 +37,7 @@ function Product() {
   return (
     <>
       {isLoading ? (
-        <Loader />
+        <LoadingCircle />
       ) : (
         <MoreDetailes
           setMainPhotoId={callbacks.setMainPhotoId}

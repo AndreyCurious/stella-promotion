@@ -1,5 +1,5 @@
 import { IProduct } from '../../models/IProduct';
-import ProductCard from '../cardproduct';
+import ProductCard from '../productCard';
 import './index.css';
 import React, { FC, memo } from 'react';
 

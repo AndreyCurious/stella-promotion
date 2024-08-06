@@ -11,6 +11,12 @@
 	border-radius: 5px;
 }
 
+.Add_basket-basket.loading {
+	display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
 .Add_basket-basket:hover {
 	background-color: #52baab;
 }
@@ -26,6 +32,9 @@
 	height: 100%;
 	border: 1px solid #007468;
 	border-radius: 5px;
+}
+.Add_basket-count-pluse:focus, .Add_basket-count-minus:focus {
+	background-color: #f6f6f6;
 }
 
 .Add_basket-count-pluse, .Add_basket-count-minus {
@@ -54,12 +63,3 @@
   margin: 0 !important; 
 }
 
-@media (pointer: fine) { 
-	.Add_basket-basket:hover {
-		background-color: #52baab;
-	}
-}
-
-@media (pointer: coarse) {
-
-}
