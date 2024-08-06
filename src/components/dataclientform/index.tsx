@@ -6,12 +6,12 @@ import { IProduct } from '../../models/IProduct';
 import { URL_API, CHAT_ID } from '../../api';
 import axios from 'axios';
 
-interface DataClientForm {
+interface IDataClientForm {
   totalPrice: number;
   productsInBasket: IProduct[];
 }
 
-const DataClientForm: FC<DataClientForm> = (props) => {
+const DataClientForm: FC<IDataClientForm> = (props) => {
   const name = useInput('', { isEmpty: true, isName: false });
   const number = useInput('', { isEmpty: true, isNumber: false });
   const email = useInput('', { isEmpty: true, isEmail: false });

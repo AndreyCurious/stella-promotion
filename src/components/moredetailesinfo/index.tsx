@@ -7,6 +7,7 @@ import Addbasket from '../addbasket';
 interface MoreDetailesInfo {
   currentProduct: IProduct;
   addBasket: (product: IProduct, countbasket: number) => void;
+  openBasket: () => void;
 }
 
 const MoreDetailesInfo: FC<MoreDetailesInfo> = (props) => {
@@ -24,6 +25,7 @@ const MoreDetailesInfo: FC<MoreDetailesInfo> = (props) => {
       </div>
       <div className="More_detailes_info-count-container">
         <Addbasket
+          openBasket={props.openBasket}
           product={props.currentProduct}
           addBasket={props.addBasket}
           basket={'Купить'}

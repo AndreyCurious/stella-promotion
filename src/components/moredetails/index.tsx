@@ -11,6 +11,7 @@ interface IMoreDetails {
   mainPhoto: product_imgs;
   mainPhotoId: number;
   addBasket: (product: IProduct, countbasket: number) => void;
+  openBasket: () => void;
 }
 
 const MoreDetails: FC<IMoreDetails> = (props) => {
@@ -23,7 +24,7 @@ const MoreDetails: FC<IMoreDetails> = (props) => {
         <img
           className="back_icon"
           src="https://cdn-icons-png.flaticon.com/512/2223/2223615.png"
-          alt="Вернуться назад"
+          alt="back"
         />
       </Link>
       <div className="More_detailes-content-container">
@@ -34,6 +35,7 @@ const MoreDetails: FC<IMoreDetails> = (props) => {
           mainPhotoId={props.mainPhotoId}
         />
         <MoreDetailesInfo
+          openBasket={props.openBasket}
           addBasket={props.addBasket}
           currentProduct={props.currentProduct}
         />

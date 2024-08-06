@@ -2,7 +2,7 @@ import './index.css';
 import React, { FC, memo } from 'react';
 import MenuBurger from '../burgerMenu/index';
 
-interface Mainheader {
+interface IMainHeader {
   isOpen: boolean;
   openMenu: () => void;
   clickRef1: () => void;
@@ -10,7 +10,7 @@ interface Mainheader {
   clickRef3: () => void;
 }
 
-const Mainheader: FC<Mainheader> = (props) => {
+const Mainheader: FC<IMainHeader> = (props) => {
   return (
     <header className="Header-container">
       <div className="Header-container-first_floor">
@@ -18,7 +18,10 @@ const Mainheader: FC<Mainheader> = (props) => {
           className="first-floor-logo"
           href="/"
         >
-          <img src="https://static.tildacdn.info/tild3133-3462-4837-b563-626536326364/__3_1_2.svg" />
+          <img
+            src="https://static.tildacdn.info/tild3133-3462-4837-b563-626536326364/__3_1_2.svg"
+            alt="logo"
+          />
         </a>
         <div className="first-floor-container_mail_tel_btn">
           <a

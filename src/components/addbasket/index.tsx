@@ -1,14 +1,15 @@
-import { IProduct, product_imgs } from '../../models/IProduct';
+import { IProduct } from '../../models/IProduct';
 import './index.css';
 import React, { FC, memo, useState } from 'react';
 
-interface AddBasket {
+interface IAddBasket {
   product: IProduct;
   basket: string;
   addBasket: (product: IProduct, countbasket: number) => void;
+  openBasket?: () => void;
 }
 
-const AddBasket: FC<AddBasket> = (props) => {
+const AddBasket: FC<IAddBasket> = (props) => {
   const [countProducts, setCountProducts] = useState<number>(1);
   return (
     <>
@@ -43,6 +44,7 @@ const AddBasket: FC<AddBasket> = (props) => {
         onClick={() => {
           props.addBasket(props.product, countProducts);
           setCountProducts(1);
+          props.basket === 'Купить' && props.openBasket?.();
         }}
         className="Add_basket-basket"
       >

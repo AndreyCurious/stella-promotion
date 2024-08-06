@@ -1,12 +1,12 @@
 import { IBanner } from '../../models/IBanner';
 import './index.css';
-import React, { FC, memo, useRef } from 'react';
+import React, { FC, memo } from 'react';
 
-interface Banner {
+interface IItemBanner {
   item: IBanner | null;
 }
 
-const Banner: FC<Banner> = (props) => {
+const Banner: FC<IItemBanner> = (props) => {
   return (
     <div
       id={props.item?.fetch_title}

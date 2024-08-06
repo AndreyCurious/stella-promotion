@@ -1,13 +1,13 @@
 import './index.css';
 import React, { FC, memo } from 'react';
 
-interface PriceProduct {
+interface IPriceProduct {
   oldPrice: number;
   newPrice: number;
   count: number;
 }
 
-const PriceProduct: FC<PriceProduct> = (props) => {
+const PriceProduct: FC<IPriceProduct> = (props) => {
   return (
     <>
       <span className="Product-newprice">

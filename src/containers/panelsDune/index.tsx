@@ -71,7 +71,9 @@ const DunePanels = React.forwardRef<
       dispatch(addProduct({ product, countbasket }));
     },
     morePanels: () =>
-      dispatch(moreProducts({ collection: 'panels_dune', products: 'panels' })),
+      dispatch(
+        moreProducts({ collection: 'panels_dune', products: 'products' })
+      ),
     moreCorners: () =>
       dispatch(
         moreProducts({ collection: 'panels_dune', products: 'corners' })

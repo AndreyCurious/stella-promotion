@@ -1,12 +1,12 @@
 import './index.css';
 import React, { FC, memo } from 'react';
 
-interface BackgroundTemplate {
+interface IBackgroundTemplate {
   closeMenu: () => void;
   isOpen: boolean;
 }
 
-const BackgroundTemplate: FC<BackgroundTemplate> = (props) => {
+const BackgroundTemplate: FC<IBackgroundTemplate> = (props) => {
   return (
     <div
       onClick={props.closeMenu}

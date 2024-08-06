@@ -1,12 +1,12 @@
 import './index.css';
 import React, { FC, memo } from 'react';
 
-interface MenuBurger {
+interface IMenuBurger {
   openMenu: () => void;
   isOpen: boolean;
 }
 
-const MenuBurger: FC<MenuBurger> = (props) => {
+const MenuBurger: FC<IMenuBurger> = (props) => {
   return (
     <button
       onClick={props.openMenu}

@@ -1,11 +1,11 @@
 import './index.css';
 import React, { FC, memo } from 'react';
 
-interface Closebtn {
+interface IClosebtn {
   closeMenu: () => void;
 }
 
-const Closebtn: FC<Closebtn> = (props) => {
+const Closebtn: FC<IClosebtn> = (props) => {
   return (
     <button
       className="Close-btn"

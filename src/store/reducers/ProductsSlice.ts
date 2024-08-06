@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IProduct } from "../../models/IProduct";
 import { fetchProducts } from "./ActionCreators";
 
-interface productsSlice {
+interface IProductsSlice {
 	products: product;
 	isLoading: boolean;
 	limit: limits;
@@ -59,7 +59,7 @@ interface errorsCategories {
 	slats: string;
 }
 
-const initialState: productsSlice = {
+const initialState: IProductsSlice = {
 	products: {
 		panels_classic: [],
 		panels_dune: [],

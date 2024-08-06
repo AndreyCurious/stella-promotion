@@ -27,6 +27,7 @@
 	transition: all .3s ease;
 	height: 35px;
 	width: 150px;
+	cursor: pointer;
 }
 
 .Category-more_products_btn:hover {

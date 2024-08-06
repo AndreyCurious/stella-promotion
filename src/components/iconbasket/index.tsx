@@ -2,13 +2,13 @@ import './index.css';
 import React, { FC, memo } from 'react';
 import shopper from '../../assets/free-icon-shopping-bag-2956820.png';
 
-interface IconBasket {
+interface IBasketIcon {
   count: number;
   openBasket: () => void;
   isOpen: boolean;
 }
 
-const IconBasket: FC<IconBasket> = (props) => {
+const IconBasket: FC<IBasketIcon> = (props) => {
   return (
     <>
       <button
@@ -19,7 +19,10 @@ const IconBasket: FC<IconBasket> = (props) => {
         }
         onClick={props.openBasket}
       >
-        <img src={shopper} />
+        <img
+          alt="shopper"
+          src={shopper}
+        />
         <span className="Icon-basket-count">{props.count}</span>
       </button>
     </>

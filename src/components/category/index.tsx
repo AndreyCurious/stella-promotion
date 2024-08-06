@@ -1,9 +1,9 @@
 import { IProduct } from '../../models/IProduct';
-import ProductCard from '../productCard';
+import ProductCard from '../cardproduct';
 import './index.css';
 import React, { FC, memo } from 'react';
 
-interface Category {
+interface ICategory {
   products: IProduct[];
   openDetailes: (product: IProduct) => void;
   addBasket: (product: IProduct, countbasket: number) => void;
@@ -12,7 +12,7 @@ interface Category {
   isLoading: boolean;
 }
 
-const Category: FC<Category> = (props) => {
+const Category: FC<ICategory> = (props) => {
   return (
     <>
       <div className="Category-container">

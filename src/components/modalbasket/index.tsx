@@ -2,14 +2,14 @@ import './index.css';
 import React, { FC, ReactNode, memo, useEffect } from 'react';
 import Closebtn from '../closebtn';
 
-interface ModalBasket {
+interface IModalBasket {
   children: string | JSX.Element | JSX.Element[] | ReactNode;
   isOpen: boolean;
   closeBasket: () => void;
   scrollY: string;
 }
 
-const ModalBasket: FC<ModalBasket> = (props) => {
+const ModalBasket: FC<IModalBasket> = (props) => {
   // закрываем окно по нажатию на esc
   useEffect(() => {
     function handleEscapeKey(event: KeyboardEvent) {
@@ -19,7 +19,7 @@ const ModalBasket: FC<ModalBasket> = (props) => {
     }
     document.addEventListener('keydown', handleEscapeKey);
     return () => document.removeEventListener('keydown', handleEscapeKey);
-  }, []);
+  });
   return (
     <>
       <div

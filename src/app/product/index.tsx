@@ -2,7 +2,7 @@ import React, { memo, useEffect } from 'react';
 import MoreDetailes from '../../components/moredetails';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { setMainPhotoId } from '../../store/reducers/MoreDetailsSlice';
-import { addProduct } from '../../store/reducers/BasketSlice';
+import { addProduct, openBasket } from '../../store/reducers/BasketSlice';
 import { IProduct } from '../../models/IProduct';
 import { fetchSingleProduct } from '../../store/reducers/ActionCreators';
 import Loader from '../../components/loader';
@@ -31,6 +31,7 @@ function Product() {
     addbasket: (product: IProduct, countbasket: number) => {
       dispatch(addProduct({ product, countbasket }));
     },
+    openBasket: () => dispatch(openBasket()),
   };
 
   return (
@@ -44,6 +45,7 @@ function Product() {
           currentProduct={product}
           mainPhoto={mainPhoto[0]}
           addBasket={callbacks.addbasket}
+          openBasket={callbacks.openBasket}
         />
       )}
     </>

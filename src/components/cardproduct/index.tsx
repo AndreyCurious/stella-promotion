@@ -5,13 +5,14 @@ import { Link } from 'react-router-dom';
 import PricesProduct from '../pricesproduct';
 import AddBasket from '../addbasket';
 
-interface ProductCard {
+interface IProductCard {
   product: IProduct;
   openModalDetailes: (product: IProduct) => void;
   addBasket: (product: IProduct, countbasket: number) => void;
+  openBasket?: () => void;
 }
 
-const ProductCard: FC<ProductCard> = (props) => {
+const ProductCard: FC<IProductCard> = (props) => {
   const handleBackground = (e: HTMLElement, img: string) => {
     e.style.backgroundImage = `url("${img}")`;
   };
@@ -66,6 +67,7 @@ const ProductCard: FC<ProductCard> = (props) => {
         </Link>
         <div className="Card-product-count-container">
           <AddBasket
+            openBasket={props.openBasket}
             product={props.product}
             addBasket={props.addBasket}
             basket={'В корзину'}

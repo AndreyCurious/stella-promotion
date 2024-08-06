@@ -53,3 +53,13 @@
   -webkit-appearance: none !important; 
   margin: 0 !important; 
 }
+
+@media (pointer: fine) { 
+	.Add_basket-basket:hover {
+		background-color: #52baab;
+	}
+}
+
+@media (pointer: coarse) {
+
+}

@@ -19,7 +19,7 @@ const PhotosBlock: FC<IPhotosBlock> = (props) => {
             onClick={() => props.setMainPhotoId(photo.id)}
             key={photo.id}
             src={photo.img}
-            alt={`detail_photo_${photo.id}`}
+            alt={`detail ${photo.id}`}
           />
         ))}
       </div>
@@ -34,14 +34,14 @@ const PhotosBlock: FC<IPhotosBlock> = (props) => {
         >
           <img
             src="https://cdn-icons-png.flaticon.com/128/32/32542.png"
-            alt="Стрелка влево"
+            alt="before"
           />
         </button>
 
         <img
           className="Photos_block-product-main_photo"
           src={props.mainPhoto.img}
-          alt="Главное фото"
+          alt="main"
         />
         <button
           className="icon-right"
@@ -53,7 +53,7 @@ const PhotosBlock: FC<IPhotosBlock> = (props) => {
         >
           <img
             src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
-            alt="Стрелка вправо"
+            alt="after"
           />
         </button>
       </div>

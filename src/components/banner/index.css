@@ -172,6 +172,7 @@
 	}
 	.Banner-right_side-content-new_price {
 		font-size: 24px;
+		width: 75px;
 		
 	}
 	.Banner-left_side_title {
@@ -190,16 +191,6 @@
 	.Banner-left_side_title {
 		font-size: 1.3em;
 	}
-	.Banner-right_side-content-new_price {
-		width: 60%;
-	}
 }
 
-
-
-@media screen and (max-width: 370px) {
-	.Banner-right_side-content-new_price {
-		width: 75%;
-	}
-}
 

@@ -1,11 +1,11 @@
 import React, { FC, memo } from 'react';
 import './index.css';
 
-interface TotalPrice {
+interface ITotalPrice {
   totalPrice: number;
 }
 
-const TotalPrice: FC<TotalPrice> = (props) => {
+const TotalPrice: FC<ITotalPrice> = (props) => {
   return (
     <div className="Total_price">
       <span>Всего: {props.totalPrice} руб.</span>
