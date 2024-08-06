@@ -17,12 +17,7 @@
   align-items: baseline;
 }
 
-.Add_basket-basket:hover {
-	background-color: #52baab;
-}
-.Add_basket-basket:focus {
-	background-color: #007468;
-}
+
 
 .Add_basket-count {
 	display: flex;
@@ -33,9 +28,7 @@
 	border: 1px solid #007468;
 	border-radius: 5px;
 }
-.Add_basket-count-pluse:focus, .Add_basket-count-minus:focus {
-	background-color: #f6f6f6;
-}
+
 
 .Add_basket-count-pluse, .Add_basket-count-minus {
 	border: none;
@@ -61,5 +54,17 @@
 .Add_basket-input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none !important; 
   margin: 0 !important; 
+}
+
+@media (pointer: fine) {
+	.Add_basket-basket:hover {
+		background-color: #52baab;
+	}
+	.Add_basket-basket:focus {
+		background-color: #007468;
+	}
+	.Add_basket-count-pluse:focus, .Add_basket-count-minus:focus {
+		background-color: #f6f6f6;
+	}
 }
 
