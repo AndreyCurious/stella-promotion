@@ -9,6 +9,7 @@
 	font-size: 0.8em;
 	font-weight: 600;
 	border-radius: 5px;
+	position: relative;
 }
 
 .Add_basket-basket.loading {

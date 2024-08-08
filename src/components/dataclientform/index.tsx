@@ -1,5 +1,5 @@
 import './index.css';
-import React, { FC, memo } from 'react';
+import React, { FC, memo, useState } from 'react';
 import useInput from '../../hooks/useInput';
 import Totalprice from '../totalprice';
 import { IProduct } from '../../models/IProduct';
@@ -15,9 +15,10 @@ const DataClientForm: FC<IDataClientForm> = (props) => {
   const name = useInput('', { isEmpty: true, isName: false });
   const number = useInput('', { isEmpty: true, isNumber: false });
   const email = useInput('', { isEmpty: true, isEmail: false });
+  const [isDisable, setIsDisable] = useState<boolean>(false);
   const { productsInBasket, totalPrice } = props;
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     let products = '';
     productsInBasket.forEach((product) => {
@@ -31,20 +32,20 @@ const DataClientForm: FC<IDataClientForm> = (props) => {
     message += `<b>Почта: ${email.value}</b>\n`;
     message += `<b>Список товаров:\n${products}</b>\n`;
     message += `<b>Итоговая стоимость: ${totalPrice} руб.</b>`;
-
-    axios
-      .post(URL_API, {
+    try {
+      setIsDisable(true);
+      await axios.post(URL_API, {
         chat_id: CHAT_ID,
         parse_mode: 'html',
         text: message,
-      })
-      .then((res) => {
-        window.location.reload();
-        alert('Заявка успешно создана! Ожидайте, с вами свяжется менеджер.');
-      })
-      .catch((err) => {
-        alert('Произошла ошибка, повторите отправку формы снова!');
       });
+      window.location.reload();
+      alert('Заявка успешно создана! Ожидайте, с вами свяжется менеджер.');
+      setIsDisable(false);
+    } catch (e) {
+      setIsDisable(false);
+      alert('Произошла ошибка, повторите отправку формы снова!');
+    }
   };
 
   return (
@@ -102,7 +103,7 @@ const DataClientForm: FC<IDataClientForm> = (props) => {
       <input
         className="Client_form-input_submitbtn"
         disabled={
-          email.emailError || number.numberError || name.nameError
+          email.emailError || number.numberError || name.nameError || isDisable
             ? true
             : false
         }

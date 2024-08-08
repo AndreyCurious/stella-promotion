@@ -55,6 +55,7 @@ const AddBasket: FC<IAddBasket> = (props) => {
           props.basket === 'Купить' && props.openBasket?.();
           fakeLoading();
         }}
+        disabled={isFakeLoading}
         className={
           isFakeLoading ? 'Add_basket-basket loading' : 'Add_basket-basket'
         }

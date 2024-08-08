@@ -60,7 +60,7 @@
 
 .Banner-right_side-content-info {
 	font-size: 18px;
-	padding: 0 0 10px 0;
+	padding: 10px !important;
 }
 
 .Banner-right_side-content-info>li {

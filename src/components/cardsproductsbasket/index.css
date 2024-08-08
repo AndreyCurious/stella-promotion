@@ -12,6 +12,8 @@
 .Cards-products-basket-product-second_section {
 	display: flex;
 	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
 }
 
 .Cards-products-basket-product-img>img {
@@ -72,13 +74,13 @@
 	.Cards-products-basket-product-second_section {
 		flex-direction: column;
 		align-items: flex-start;
-		justify-content: space-between;
 		margin-left: 10px;
 		height: 100px;
 	}
 	.Cards-products-basket-product-title {
 		width: 100%;
 		margin: 0;
+		font-size: 0.9em;
 	}
 	.Cards-products-basket-product-btns-change_count {
 		padding: 0;

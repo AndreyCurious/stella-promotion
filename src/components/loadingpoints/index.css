@@ -2,9 +2,10 @@
 .Loading-points {
   width: 7px;
   height: 7px;
+  top: -2px;
+  left: 47%;
   position: absolute;
   border-radius: 50%;
-  position: relative;
   -webkit-animation: Loading-points 0.5s 0.35s ease alternate infinite;
   animation: Loading-points 0.5s 0.35s ease alternate infinite;
 }
